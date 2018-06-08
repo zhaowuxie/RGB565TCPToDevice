@@ -58,8 +58,7 @@ class ViewController: UIViewController {
     var curImgData = Data()
     let onceCount = 60000//每次发送长度，最后一次不一定
     var totalCount = 0
-
-    //var curSendIndex = 0
+    var curSendIndex = 0
     //var starDate = Date()
     let timeOut = 10
     
