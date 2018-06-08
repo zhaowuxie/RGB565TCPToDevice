@@ -62,6 +62,8 @@ class ViewController: UIViewController {
     //var starDate = Date()
     //let timeOut = 10
     
+    
+    
     @IBAction func imgClick(_ sender: UIButton) {
         //curSendIndex = 0
         totalCount = 0
