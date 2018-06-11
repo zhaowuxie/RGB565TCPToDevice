@@ -6,3 +6,5 @@
 #import "NSData+Camouflage.h"
 #import "SVProgressHUD.h"
 #import "ImageRGBRGBHelper.h"
+#import "SCLAlertView.h"
+#import "TZImagePickerController.h"

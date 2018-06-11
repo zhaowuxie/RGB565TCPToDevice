@@ -35,4 +35,6 @@
 + (UIImage*)imageFromRGB565:(void*)rawData width:(int)width height:(int)height;
 
 + (void)getRGBDataFromImage:(UIImage*)image withRGB:(void(^)(unsigned char r,unsigned char g,unsigned char b))completion;
+
++ (NSString*)fetchSSIDInfo;
 @end

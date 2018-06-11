@@ -7,6 +7,7 @@
 //
 
 #import "ImageRGBRGBHelper.h"
+#import <SystemConfiguration/CaptiveNetwork.h>
 
 @implementation ImageRGBRGBHelper
 
@@ -283,5 +284,23 @@
 
     }
 
+}
+
+//获取ssid
++ (NSString*)fetchSSIDInfo
+{
+    NSArray *ifs = (__bridge id)CNCopySupportedInterfaces();
+    //NSLog(@"ifs is %@",ifs);
+    NSString* ssid=nil;
+    id infossid = nil;
+    for (NSString *ifnam in ifs) {
+        infossid = (__bridge id)CNCopyCurrentNetworkInfo((__bridge CFStringRef)ifnam);
+        //DLog(@"ssid is %@",infossid);
+        if (infossid && [infossid count]) {
+            ssid=infossid[@"SSID"];
+            break;
+        }
+    }
+    return ssid ;
 }
 @end
